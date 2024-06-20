@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
+
+    <style>
+        * {
+            margin: 0
+        }
+
+        body {
+            background: lightcoral;
+        }
+
+        .exemplo1 {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        img {
+            object-fit: cover;
+        }
+
+        .exemplo2 img {
+            object-fit: cover;
+            width: 100vw;
+            max-width: 100%;
+            /* added */
+            height: 400px;
+        }
+
+        .exemplo3 {
+            width: 500px;
+            margin: 0 auto;
+            
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- https://kenwheeler.github.io/slick/ -->
+    <div class="exemplo1">
+        <div><img src="img/capitao-america-grande.jpg"></div>
+        <div><img src="img/homem-de-ferro-grande.jpg"></div>
+        <div><img src="img/wolverine-grande.jpg"></div>
+    </div>
+    <div class="exemplo2">
+        <div><img src="img/capitao-america-grande.jpg"></div>
+        <div><img src="img/homem-de-ferro-grande.jpg"></div>
+        <div><img src="img/wolverine-grande.jpg"></div>
+    </div>
+    <div class="exemplo3">
+        <div><img src="img/capitao-america.jpg"></div>
+        <div><img src="img/homem-de-ferro.jpg"></div>
+        <div><img src="img/wolverine.jpg"></div>
+    </div>
+    <script src="jquery-1.11.0.min.js"></script>
+    <script src="slick-1.8.1/slick/slick.js"></script>
+    <script>
+        $('.exemplo1').slick()
+        $('.exemplo2').slick({
+            autoplay:true,
+            arrows:false,
+            autoplaySpeed:1000
+        })
+        $('.exemplo3').slick({
+            infinite: true,
+            slidesToShow: 2,
+            slidesToScroll: 1
+        })
+    </script>
+
+</body>
+
+</html>
